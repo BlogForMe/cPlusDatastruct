@@ -15,7 +15,7 @@ using namespace std;
  */
 class student {
 
-public:
+private:
     string name;
     double score;
 public:
@@ -52,21 +52,24 @@ public:
     }
 
     //友元函数
-    friend istream &operator<<(istream &in, student &s);
+    friend ostream& operator<<(ostream &o, student s);
 
-    friend ostream &operator<<(ostream &o, student s);
+    friend istream& operator>>(istream &in, student &s);
+
+
 
 };
 
-ostream &operator<<(ostream &o, student s) {
+ostream& operator<<(ostream &o, student s) {
     o << s.name << " , " << s.score << endl;
     return o;
 }
 
-istream &operator>>(istream &in, student &s) {
+istream& operator>>(istream &in, student &s) {
     in >> s.name >> s.score;
     return in;
 }
+
 
 
 //成员函数实际转化成  外部函数传入 指针

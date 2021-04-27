@@ -49,7 +49,7 @@ void help() {
     cout << "请输入:左运算符 运算符  右运算符\n";
 }
 
-#else
+#elif 0
 
 #include <fstream>
 #include <iostream>

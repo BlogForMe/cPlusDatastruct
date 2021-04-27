@@ -79,9 +79,9 @@ istream& operator>>(istream &in, student &s) {
 
 
 
+#if 0
 int main() {
 
-#if 1
     student stu; // 在创建一个类对象时会自动调用称为  "构造函数" 的成员函数
     student stu1("LiPing", 100);
 //    stu.name = "Li Ping";
@@ -93,7 +93,6 @@ int main() {
 
     cin >> stu;
     cout << stu; // operator<<(cout,stu)
-#else
 
     vector<student> students;
     cout << students.size();
@@ -108,5 +107,5 @@ int main() {
     for (int i = 0; i < students.size(); ++i) {
         students[i].print();     // print(&stu)
     }
-#endif
 }
+#endif

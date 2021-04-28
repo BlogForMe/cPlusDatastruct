@@ -2,6 +2,8 @@
 // Created by mc on 21-4-27.
 //
 
+#if 0
+
 #include <iostream>
 using namespace std;
 
@@ -82,3 +84,6 @@ void f() {
 int main() {
     f();
 }
+
+
+#endif

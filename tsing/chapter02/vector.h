@@ -36,7 +36,7 @@ template <typename T> class Vector { //向量模板类
 
     public:
         //构造函数
-        Vector(int c=DEFAULT_CAPACITY, int s=0, T v=0) { //容量为 c, 规模为 s, 所有元素初始化为 v
+        Vector(int c=DEFAULT_CAPACITY, int s=0, T v=0) { //容量为 c, 规模为 s, 所有元素初始化为 02
             _elem = new T[_capacity = c];
             for (_size = 0; _size < s; _elem[_size++] = v) // s<=c
                 ;

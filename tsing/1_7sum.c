@@ -3,6 +3,7 @@
 // 二分
 //
 
+#if 0
 
 #include <stdio.h>
 
@@ -26,3 +27,5 @@ int sum(int *pA, int lo, int hi) {
     int mi = (lo + hi)>>1;
     return  sum(pA,lo,mi) +sum(pA,mi+1,hi);
 }
+
+#endif

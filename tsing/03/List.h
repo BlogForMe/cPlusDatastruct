@@ -34,11 +34,14 @@ public:
     // 析构函数
 //    ~List(); //释放（包含头、尾哨兵在内的）所有节点
 
+    void printAll() const;
     void traverse(void (*visit )(T &)) {
         for (ListNodePosi<T> p = header->succ; p != trailer; p = p->succ) {
             visit(p->data);
         }
     }
+
+    void traverse() const;
 
     void traverse_list(ListNodePosi<T> pNode) {
         cout<<("开始输出%d\n");
@@ -50,9 +53,7 @@ public:
         }
     }
 
-    void print(T t) {
-        cout << t << " ";
-    }
+
 
 //    ListNodePosi<T> insertAsFirst(T const&e){
 //        _size++;
@@ -74,6 +75,7 @@ public:
             p = p->succ;
         }
     }
+
 };
 
 

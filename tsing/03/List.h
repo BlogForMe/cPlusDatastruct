@@ -32,43 +32,31 @@ public:
 
     List(List<T> const &L); //整体复制列表L
     // 析构函数
-//    ~List(); //释放（包含头、尾哨兵在内的）所有节点
+    ~List(); //释放（包含头、尾哨兵在内的）所有节点
+    int clear(); //清除所有节点
 
-    void printAll() const;
-    void traverse(void (*visit )(T &)) {
-        for (ListNodePosi<T> p = header->succ; p != trailer; p = p->succ) {
-            visit(p->data);
-        }
-    }
+    ListNodePosi<T> first() const { return header->succ; } //首节点位置
 
-    void traverse() const;
 
-    void traverse_list(ListNodePosi<T> pNode) {
-        cout<<("开始输出%d\n");
+    T remove(ListNodePosi<T> p);  //删除合法位置p处的节点,返回被删除节点
 
-        ListNodePosi<T> p = pNode->succ;
-        while (p != NULL) {
-            cout<<("输出%d\n", p->data);
-            p = p->succ;
-        }
-    }
+
+    void reverse(); //前后倒置（习题）
+
+    void traverse();
+
+    // 遍历
+    void traverse ( void (* ) ( T& ) ); //遍历，依次实施visit操作（函数指针，只读或局部性修改）
+
+    template <typename VST> //操作器
+    void traverse ( VST& ); //遍历，依次实施visit操作（函数对象，可全局性修改）
 
 
 
-//    ListNodePosi<T> insertAsFirst(T const&e){
-//        _size++;
-//        return header->
-//    }
+    ListNodePosi<T> insertAsLast(T const &e) ; //e当作末节点插入
 
 
-
-
-    ListNodePosi<T> insertAsLast(T const &e) {
-        _size++;
-        return trailer->insertAsPred(e); //e当作末节点插入
-    }
-
-    void copyNodes(Posi(T)p, int n) {
+    void copyNodes(ListNodePosi<T> p, int n) {
         init(); //创建头，尾哨兵节点并初始化
         while (n--) { //将起自
             insertAsLast(p->data);

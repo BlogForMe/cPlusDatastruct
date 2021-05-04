@@ -4,37 +4,29 @@
 
 #if 1
 #include "List.h"
-#include "list_printAll.h"
+#include "List_traverse.h"
+#include "List_insert.h"
+#include "list_destructor.h"
 
 int main() {
 
-    List<int> mList ;
 
-//    int a[] = {1, 2, 6, 5, 4, 7, 9, 8};
-//    ListNodePosi<int> pList;
-//    for (int i = 0; i < 10; ++i) {
-//        pList->insertAsPred(i);
-//    }
+    int a[] = {1, 2, 6, 5, 4, 7, 9, 8};
 
-    cout<<"fe"<<endl;
-
-    List<int> list;
+    List<int> list ;
     for (int i = 0; i < 10; ++i) {
         list.insertAsLast(i);
     }
 
-    list.printAll();
+    List<int> myList;
+//    myList.copyNodes(list,4);
 
-//    mList.traverse_list(pList);
-//    mList.traverse();
-
-
+    list.traverse();
+    list.remove(list.first()->succ);
+    list.traverse();
 
 }
 
- void print(int t) {
-    cout << t << " ";
-}
 
 
 #endif

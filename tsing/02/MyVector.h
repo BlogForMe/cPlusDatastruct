@@ -199,7 +199,7 @@ public:
         return j - i;
     }
 
-    static Rank binSearch(T *S, T const &e, Rank lo, Rank hi) {
+    Rank binSearch(T *S, T const &e, Rank lo, Rank hi) {
 #if 0 //递归思想
         while (lo<hi){
             Rank mid = (hi + lo) / 2;
@@ -215,7 +215,7 @@ public:
         return -1;
 #endif
 
-#if 1
+#if 0
         while (lo < hi) {
             Rank mid = (hi +lo) >> 1;
 //            cout << " Rank binSearch " <<mid <<  endl;
@@ -228,7 +228,6 @@ public:
             }
         }
         return lo-1;
-
 #endif
 
 #if 0
@@ -240,7 +239,17 @@ public:
         return e < S[lo] ? lo - 1 : lo; //返回位置，总
 
 #endif
+#if 1
+        while (lo < hi) {
+            Rank mi = (lo + hi) >> 1;
+//            report("binSearch lo<hi  " );
 
+            cout << " Rank binSearch mi " << mi << " lo " <<lo<<" hi "<<hi<<endl;
+            (e < S[mi]) ? hi = mi : lo = mi + 1;
+        }
+        return --lo;
+
+#endif
     }
 
 
@@ -248,23 +257,39 @@ public:
         while (lo < hi) { //每步迭代仅需做一次比较判断，有两个分支
 
             Rank mi = (lo + hi) >> 1; //以中点为轴点（区间宽度的折半，等效于宽度之数值表示的右移）
-            cout << " Rank binSearch " <<mi <<  endl;
+            cout << " Rank binSearch mi " << mi << " lo " <<lo<<" hi "<<hi<<endl;
             (e < S[mi]) ? hi = mi : lo = mi + 1; //经比较后确定深入[lo, mi)或(mi, hi)
         } //成功查找不能提前终止
         return lo - 1; //循环结束时，lo为大于e的元素的最小秩，故lo - 1即不大于e的元素的最大秩
     }
 
 
-    void test() {
-        int n;
-        while (n++) {
-            if (n == 100) {
-                cout << "退出" << endl;
-                return;
-            }
-        }
+    void bubbleSort(Rank lo,Rank hi){
+       while (lo<(hi = bubble(lo,hi))); //逐趟扫描交换，直至全序  last从high到lo
     }
 
+    Rank bubble(Rank lo,Rank hi){
+        Rank last = lo;    //最右侧的逆序对初始化胃[lo-1,lo]
+        while (++lo<hi){    //自左向右，逐一检查各对相邻远元素
+            if(_elem[lo-1]>_elem[lo]){
+                last = lo;     //更新最右侧逆序对位置记录
+                swap(_elem[lo-1],_elem[lo]);
+            }
+        }
+
+        report("bubble ");
+        cout<< "last " << last <<endl;
+        return  last;
+    }
+
+
+
+    void print(int* p){
+        for (int i = 0; i < 7; ++i) {
+            cout<< *(p+i)<<" ";
+        }
+
+    }
 };
 
 

@@ -6,10 +6,11 @@
 #include "MyVector.h"
 
 using namespace std;
+#if 0
 
 int main() {
 //    cout<<"输出" <<endl;
-    int a[] = {1, 2, 3, 5, 6, 7, 8, 9};
+    int a[] = {1, 2, 6, 5, 4, 7, 9, 8};
 //    int a[100] ;
 //    for (int i = 0; i < 100; ++i) {
 //        a[i] = i;
@@ -17,9 +18,10 @@ int main() {
 //    MyVector<int> myVector= MyVector<int>();
 
 
-    MyVector<int> myVector = MyVector<int>(a, 0, 3);
-    myVector.report("traverse");
+    MyVector<int> myVector = MyVector<int>(a, 0, sizeof(a) / sizeof(int));
+//    myVector.report("traverse");
 
+    myVector.print(a);
 #if 0
     myVector.insert(4);
     myVector.insert(6);
@@ -51,10 +53,17 @@ int main() {
 
     myVector.uniquify();
     myVector.report("uniquify");
+
+
+
+//    cout << "binSearch " << myVector.binSearch(a, 3, 0, sizeof(a)/ sizeof(int)) << endl;
+//    myVector.test();
+    myVector.bubbleSort(0, sizeof(a) / sizeof(int));
+//    myVector.report("uniquify");
+
 #endif
-
-
-    cout << "binSearch " << myVector.binSearch(a, 4, 0, sizeof(a)/ sizeof(int)) << endl;
-    myVector.test();
     return 0;
 }
+
+
+#endif

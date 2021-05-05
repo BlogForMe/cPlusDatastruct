@@ -33,10 +33,13 @@ public:
     List(List<T> const &L); //整体复制列表L
     // 析构函数
     ~List(); //释放（包含头、尾哨兵在内的）所有节点
+    T&operator[](Rank r) const ;  //规模
+
     int clear(); //清除所有节点
 
     ListNodePosi<T> first() const { return header->succ; } //首节点位置
 
+    Posi(T) find(T const &e,int n,Posi(T) p)const; //顺序查找
 
     T remove(ListNodePosi<T> p);  //删除合法位置p处的节点,返回被删除节点
 

@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(temple)
 include_directories(tsing/02)
-include_directories(tsing/chapter02)
 include_directories(tsing/share)
 
 add_executable(datastruct
@@ -39,18 +38,26 @@ add_executable(datastruct
         hwdong/10Class.cpp
         hwdong/12operator.cpp
         hwdong/13String.cpp
-        temple/main.cpp
-        temple/stack.cpp
-        temple/stack.h
         tsing/02/main.cpp
         tsing/02/MyVector.cpp
         tsing/02/MyVector.h
-        tsing/chapter02/vector.cpp
-        tsing/chapter02/vector.h
-        tsing/chapter02/vector_main.cpp
         tsing/share/rand.h
         tsing/1_5_reverse.c
         tsing/1_7sum.c
         tsing/Fibonacci2.c
-        tsing/03/listnode.h  tsing/03/List.h tsing/03/List_traverse.h tsing/03/main.cpp tsing/03/List_insert.h tsing/03/list_destructor.h tsing/03/list_clear.h tsing/03/list_remove.h tsing/03/list_bracket.h)
+
+        tsing/vector/vector.h
+        tsing/vector/Vector_insert.h
+        tsing/vector/vector_remove.h
+        tsing/vector/vector_traverse.h
+        tsing/vector/vector_expand.h
+        tsing/vector/vector_remove.h
+        tsing/vector/vector_removeInterval.h
+        tsing/vector/vector_shrink.h
+
+
+        tsing/vector/main.cpp
+        tsing/03/listnode.h  tsing/03/List.h tsing/03/List_traverse.h tsing/03/main.cpp tsing/03/List_insert.h tsing/03/list_destructor.h tsing/03/list_clear.h tsing/03/list_remove.h tsing/03/list_bracket.h tsing/03/List_find.h tsing/03/List_uniquify.h tsing/03/List_deduplicate.h tsing/03/List_serach.h tsing/03/list_initialize.h tsing/03/List_SelectionSort.h _share/comparator.h tsing/03/List_selectMax.h tsing/03/List_insertionsort.h tsing/03/listNode_insertAsSucc.h tsing/04/stack_vector.h _share/pm_kr.h tsing/04/convert.h tsing/04/main.cpp)
+
+
 

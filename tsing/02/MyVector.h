@@ -49,6 +49,7 @@ public:
     MyVector(MyVector<T> const &V, Rank lo, Rank hi) {
         copyFrom(V._elem, lo, hi);
     };
+    Rank size() const { return _size; } //规模
 
     ~MyVector() {
         delete[]_elem;

@@ -4,11 +4,14 @@
 #include <iostream>
 #include "../vector/vector_bracket.h"
 #include "stack_vector.h"
+#include "../vector/vector_traverse.h"
+#include "convert.h"
+#include "nest.h"
 
 using namespace std;
 
 
-#if 1
+#if 0
 
 
 int main() {
@@ -16,22 +19,33 @@ int main() {
 
     Stack<int> S;
 //
-//    convert(S,20,2);
 
-    S.push(1);
-    S.push(1);
-    S.push(3);
-    S.push(6);
-    S.push(7);
+//    S.push(1);
+//    S.push(1);
+//    S.push(3);
+//    S.push(6);
+//    S.push(7);
 
-    S.pop();
-//    cout<<" S.pop() "<< <<endl;
+//    S.traverse();
+//
+//    cout<<" S.pop() "<< S.pop()<<endl;
 //    cout<<"S.top()  " <<S.top()<<endl;
+//
+//    for (int i = 0; i < S.size(); ++i) {
+//
+//        cout<<" "<<S[i];
+//    }
 
-    for (int i = 0; i < S.size(); ++i) {
+//    convert(S,2013,2);
+//
+//    while(!S.empty()){
+//        printf("%d ",S.pop());
+//    }
 
-        cout<<" "<<S[i];
-    }
+    char cArr[] = {'(','(',')',')'};
+    cout<< sizeof(cArr)/ sizeof(char)<<endl;
+    cout<<"paren "<< paren(cArr,0, sizeof(cArr)/ sizeof(char))<<endl;
+
     return 0;
 }
 

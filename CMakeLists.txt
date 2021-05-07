@@ -59,7 +59,7 @@ add_executable(datastruct
         tsing/04/stack_vector.h
 
         tsing/vector/main.cpp
-        tsing/03/listnode.h  tsing/03/List.h tsing/03/List_traverse.h tsing/03/main.cpp tsing/03/List_insert.h tsing/03/list_destructor.h tsing/03/list_clear.h tsing/03/list_remove.h tsing/03/list_bracket.h tsing/03/List_find.h tsing/03/List_uniquify.h tsing/03/List_deduplicate.h tsing/03/List_serach.h tsing/03/list_initialize.h tsing/03/List_SelectionSort.h _share/comparator.h tsing/03/List_selectMax.h tsing/03/List_insertionsort.h tsing/03/listNode_insertAsSucc.h _share/pm_kr.h tsing/04/convert.h tsing/04/main.cpp )
+        tsing/list/listnode.h tsing/list/List.h tsing/list/List_traverse.h tsing/03/main.cpp tsing/list/List_insert.h tsing/list/list_destructor.h tsing/list/list_clear.h tsing/list/list_remove.h tsing/list/list_bracket.h tsing/list/List_find.h tsing/list/List_uniquify.h tsing/list/List_deduplicate.h tsing/list/List_serach.h tsing/list/list_initialize.h tsing/list/List_SelectionSort.h _share/comparator.h tsing/list/List_selectMax.h tsing/list/List_insertionsort.h tsing/list/listNode_insertAsSucc.h _share/pm_kr.h tsing/04/convert.h tsing/04/main.cpp tsing/04/nest.cpp tsing/04/nest.h tsing/04/stack_list.h tsing/04/MainList.cpp)
 
 
 

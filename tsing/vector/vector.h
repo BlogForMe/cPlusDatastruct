@@ -57,6 +57,11 @@ public:
     const T &operator[](Rank r) const; //仅限于做右值的重载版本
     Vector<T> &operator=(Vector<T> const &); //重载赋值操作符，以便直接克隆向量
     T remove(Rank r); //删除秩为r的元素
+//    T remove(Rank r){
+//        T e = _elem[r]; //备份被删除元素
+//        remove ( r, r + 1 ); //调用区间删除算法，等效于对区间[r, r + 1)的删除
+//        return e;
+//    }
     int remove(Rank lo, Rank hi); //删除秩在区间[lo, hi)之内的元素
     Rank insert(Rank r, T const &e); //插入元素
     Rank insert(T const &e) { return insert(_size, e); } //默认作为末元素插入

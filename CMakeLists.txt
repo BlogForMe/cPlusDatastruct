@@ -59,7 +59,7 @@ add_executable(datastruct
         tsing/04/stack_vector.h
 
         tsing/vector/main.cpp
-        tsing/list/listnode.h tsing/list/List.h tsing/list/List_traverse.h tsing/03/main.cpp tsing/list/List_insert.h tsing/list/list_destructor.h tsing/list/list_clear.h tsing/list/list_remove.h tsing/list/list_bracket.h tsing/list/List_find.h tsing/list/List_uniquify.h tsing/list/List_deduplicate.h tsing/list/List_serach.h tsing/list/list_initialize.h tsing/list/List_SelectionSort.h _share/comparator.h tsing/list/List_selectMax.h tsing/list/List_insertionsort.h tsing/list/listNode_insertAsSucc.h _share/pm_kr.h tsing/04/convert.h tsing/04/main.cpp tsing/04/nest.cpp tsing/04/nest.h tsing/04/stack_list.h tsing/04/MainList.cpp)
+        tsing/list/listnode.h tsing/list/List.h tsing/list/List_traverse.h tsing/03/main.cpp tsing/list/List_insert.h tsing/list/list_destructor.h tsing/list/list_clear.h tsing/list/list_remove.h tsing/list/list_bracket.h tsing/list/List_find.h tsing/list/List_uniquify.h tsing/list/List_deduplicate.h tsing/list/List_serach.h tsing/list/list_initialize.h tsing/list/List_SelectionSort.h _share/comparator.h tsing/list/List_selectMax.h tsing/list/List_insertionsort.h tsing/list/listNode_insertAsSucc.h _share/pm_kr.h tsing/04/convert.h tsing/04/main.cpp tsing/04/nest.cpp tsing/04/nest.h tsing/04/stack_list.h tsing/04/MainList.cpp other/pipe.c kr/07/7.1.c kr/05/e5_2.c kr/05/5_3.c kr/05/5-4.c kr/05/5_61.c)
 
 
 

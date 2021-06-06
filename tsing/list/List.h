@@ -37,6 +37,7 @@ public:
 
     ListNodePosi<T> last() const { return trailer->pred; } //末节点位置
 
+    bool empty() const { return _size <= 0; } //判空
 
     int deduplicate();//剔除无序列表中的重复节点
 

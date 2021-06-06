@@ -4,6 +4,8 @@
 // Created by mc on 21-6-4.
 //
 
+
+
 #include <rand.h>
 #include <cstdio>
 #include <release.h>
@@ -76,10 +78,11 @@ void testBinTree(int h) { //测试二叉树
 //    traverse(bt.root()); 普通遍历方法
 
 
-    bt.travIn(Double<T>());
+//    bt.travIn(Double<T>());
 //    bt.travIn(Increase<T>());
 //   bt.travPost ( Double<T>() ); bt.travPost ( Increase<T>() ); print ( bt );
-//   bt.travLevel ( Double<T>() ); bt.travLevel ( Increase<T>() ); print ( bt );
+    bt.travLevel(Double<T>());
+//   bt.travLevel ( Increase<T>() );;
 //    Hailstone<T> hs; bt.travIn ( hs ); print ( bt );
 //    printf ( "\n  ==== Test %2d. Remove/release subtrees in the Tree\n", testID++ );
 //    while ( !bt.empty() ) {
@@ -95,6 +98,8 @@ void testBinTree(int h) { //测试二叉树
 //    }
 }
 
+#if 0
+
 int main() {
 
     int m = 4;
@@ -102,3 +107,7 @@ int main() {
 
     return 0;
 }
+
+#endif
+
+

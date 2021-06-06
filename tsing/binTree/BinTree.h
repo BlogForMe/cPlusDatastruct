@@ -13,6 +13,7 @@
 #include "../../_share/comparator.h"
 #include "BinNode_travPreorder.h"
 #include "BinNode_travInorder.h"
+#include "BinNode_travlevel.h"
 
 template<typename T>
 class BinTree { //二叉树模板类
@@ -35,7 +36,7 @@ public:
 //    int remove ( BinNodePosi<T> x ); //删除以位置x处节点为根的子树，返回该子树原先的规模
 //    BinTree<T>* secede ( BinNodePosi<T> x ); //将子树x从当前树中摘除，并将其转换为一棵独立子树
 //    template <typename VST> //操作器
-//    void travLevel ( VST& visit ) { if ( _root ) _root->travLevel ( visit ); } //层次遍历
+    void travLevel(Double<T> visit) { if (_root) _root->travLevel(visit); } //层次遍历
 //    template <typename VST> //操作器
     void travPre(Double<T> visit) { if (_root) _root->travPre(visit); } //先序遍历
 //    template <typename VST> //操作器

@@ -23,13 +23,13 @@ bool randomBinTree(BinTree<T> &bt, BinNodePosi<T> x, int h) {
     if (0 >= h) return false; //至多h层
     if (0 < dice(h)) {  //以1/h的概率终止当前分支的生长
         int leftDice = dice((T) h * h * h);
-        printf(" h %d   left  %d  \n", h,leftDice);
+        printf(" h %d   left  %d  \n", h, leftDice);
         randomBinTree(bt, bt.insertAsLC(x, leftDice), h - 1);
     }
     if (0 < dice(h)) //以1/h的概率终止当前分支的生长
     {
         int rightDice = dice((T) h * h * h);
-        printf(" h  %d  right %d \n",h ,rightDice);
+        printf(" h  %d  right %d \n", h, rightDice);
         randomBinTree(bt, bt.insertAsRC(x, rightDice), h - 1);
     }
     return true;
@@ -40,10 +40,10 @@ bool randomBinTree(BinTree<T> &bt, BinNodePosi<T> x, int h) {
  * @tparam T
  * @param x
  */
-template <typename  T>
-void traverse(BinNodePosi<T> x){
-    if(!x)return;
-    printf(" %d",x->data);
+template<typename T>
+void traverse(BinNodePosi<T> x) {
+    if (!x)return;
+    printf(" %d", x->data);
     traverse(x->lc);
     traverse(x->rc);
 };
@@ -71,12 +71,13 @@ void testBinTree(int h) { //测试二叉树
     bt.insertAsRoot(root);
     randomBinTree<T>(bt, bt.root(), h);
     printf("\n  ==== Test %2d. double_Elem and increase all nodes by traversal\n", testID++);
-//    bt.travPre(Double<T>());
+//    bt.travPre(Double<T>()); //先序遍历
 
-    traverse(bt.root());
+//    traverse(bt.root()); 普通遍历方法
 
 
-//   bt.travIn ( Double<T>() ); bt.travIn ( Increase<T>() ); print ( bt );
+    bt.travIn(Double<T>());
+//    bt.travIn(Increase<T>());
 //   bt.travPost ( Double<T>() ); bt.travPost ( Increase<T>() ); print ( bt );
 //   bt.travLevel ( Double<T>() ); bt.travLevel ( Increase<T>() ); print ( bt );
 //    Hailstone<T> hs; bt.travIn ( hs ); print ( bt );

@@ -12,7 +12,7 @@
 #define stature(p) ((p) ? (p)->height : 0) //红黑树节点的黑高度（NULL视作外部节点，对应于0）
 #else
 #define stature(p) ((p) ? (p)->height : -1) //其余BST中节点的高度（NUll视作空树，对应于-1）
-#endif   11
+#endif
 typedef enum { RB_RED, RB_BLACK} RBColor; //节点颜色
 template <typename T> struct BinNode;
 template <typename T> using BinNodePosi = BinNode<T>*; //节点位置

@@ -8,6 +8,12 @@
 #include "List.h"
 #include "listNode_insertAsSucc.h"
 
+
+
+template <typename T> ListNodePosi<T> List<T>::insertAsFirst (T const& e )
+{  _size++; return header->insertAsSucc ( e );  } //e当作首节点插入
+
+
 template<typename T>
 ListNodePosi<T> List<T>::insertAsLast(T const &e) {
     _size++;

@@ -60,6 +60,9 @@ public:
     void traverse(VST &); //遍历，依次实施visit操作（函数对象，可全局性修改）
 
 
+    ListNodePosi<T> insertAsFirst ( T const& e ); //将e当作首节点插入
+
+
     ListNodePosi<T> insertAsLast(T const &e); //e当作末节点插入
 
     void insertionSort(ListNodePosi<T> p,int n);
@@ -75,6 +78,10 @@ public:
     int uniquify();
 
     ListNodePosi<T> selectMax(ListNodePosi<T> p,int n); // 在p及其n-1个后继中选出最大者
+
+    ListNodePosi<T> selectMax() { return selectMax ( header->succ, _size ); } //整体最大者
+
+
     ListNodePosi<T> insertB ( ListNodePosi<T> p, T const& e ); //将e当作p的前驱插入（Before）
     ListNodePosi<T> insertA ( ListNodePosi<T> p, T const& e ); //将e当作p的后继插入（After）
 

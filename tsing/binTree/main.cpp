@@ -4,7 +4,12 @@
 // Created by mc on 21-6-4.
 //
 
-
+/**
+ *                39
+ *            41      20
+ *         14    5   8    22
+ *       2   2        5  7
+ */
 
 #include <rand.h>
 #include <cstdio>
@@ -75,13 +80,13 @@ void testBinTree(int h) { //测试二叉树
     printf("\n  ==== Test %2d. double_Elem and increase all nodes by traversal\n", testID++);
 //    bt.travPre(Double<T>()); //先序遍历
 
-//    traverse(bt.root()); 普通遍历方法
+//    traverse(bt.root()
 
 
 //    bt.travIn(Double<T>());
 //    bt.travIn(Increase<T>());
 //   bt.travPost ( Double<T>() ); bt.travPost ( Increase<T>() ); print ( bt );
-    bt.travLevel(Double<T>());
+//    bt.travLevel(Double<T>());  // 层次遍历
 //   bt.travLevel ( Increase<T>() );;
 //    Hailstone<T> hs; bt.travIn ( hs ); print ( bt );
 //    printf ( "\n  ==== Test %2d. Remove/release subtrees in the Tree\n", testID++ );

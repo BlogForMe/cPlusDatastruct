@@ -203,3 +203,9 @@ add_executable(datastruct
 
 
 
+find_library(GMP_LIBRARY NAMES gmp)
+find_library(GMPXX_LIBRARY NAMES gmpxx)
+include_directories(/usr/local/opt/gmp/include)
+link_directories(/usr/local/opt/gmp/lib)
+target_link_libraries(datastruct ${GMP_LIBRARY} ${GMPXX_LIBRARY})
+

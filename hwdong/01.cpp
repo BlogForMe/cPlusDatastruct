@@ -8,7 +8,7 @@
 #include <cstdio>
 #include <cmath>
 #include <cstring>
-#include <malloc.h>
+#include <stdlib.h>
 
 #if 0
 int main() {

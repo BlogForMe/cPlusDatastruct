@@ -198,8 +198,11 @@ add_executable(datastruct
         tsing/string_pm_bf1/pm_brute1.cpp
         tsing/string_pm/string_pm_test.cpp
         tsing/string_pm/string_pm_test.h
+        cherno/Log.cpp
+        cherno/Log.h
+        cherno/main.cpp
 
-        )
+)
 
 
 

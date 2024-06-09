@@ -200,7 +200,9 @@ add_executable(datastruct
         tsing/string_pm/string_pm_test.h
         cherno/Log.cpp
         cherno/Log.h
+        cherno/Math.cpp
         cherno/main.cpp
+        cherno/static.cpp
 
 )
 

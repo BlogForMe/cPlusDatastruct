@@ -43,56 +43,73 @@ public:
 };
 
 
-extern int s_Variable;
+//class Entity {
+//public:
+//    void print() const {
+//        std::cout << "hello" << std::endl;
+//    }
+//};
+//
+//class ScopedPtr {
+//private:
+//    Entity *m_Obj;
+//public:
+//    ScopedPtr(Entity *entity) : m_Obj(entity) {
+//
+//    }
+//
+//    ~ScopedPtr(){
+//        delete m_Obj;
+//    }
+//};
 
-
-class Printable {
-public:
-    virtual std::string getClassName() = 0;
-};
-
-class Entity : public Printable {
-public:
-    virtual std::string getName() { return "Entity"; } //virtual
-
-    virtual std::string getClassName() { return "Entity"; }
-};
-
-
-class Player : public Entity {
+class Entity {
 private:
     std::string m_Name;
 public:
-    Player(const std::string &mName) : m_Name(mName) {}
+    Entity() {
+        m_Name = "UnKnown";
+    }
 
-    std::string getName() override { return m_Name; }
+    Entity(const std::string &name) {
+        m_Name = name;
+    }
 
-    std::string getClassName() override { return "Player"; }
+    const std::string &getName() const {
+        return m_Name;
+    };
+
 };
 
-void printName(Entity *entity) {
-    std::cout << entity->getName() << std::endl;
-}
-
-void print(Printable *obj) {
-    std::cout << obj->getClassName() << std::endl;
-}
-
-void printString(std::string &string) {
-    string += "h";
-    std::cout << string << std::endl;
-}
-
 int main() {
+    Entity e0;
+    std::cout<<e0.getName() <<std::endl;
 
-    const int MAX_AGE = 90;
-//    int const* a = new int;
-    int *const a = new int;
-    *a = 2;
-    std::cout << "a point change before " << a << std::endl;
-//    a = (int *) &MAX_AGE;
-    std::cout << *a << std::endl;
-    std::cout << "a point change after  " << a << std::endl;
+    Entity e1("john");
+    std::cout<<e1.getName() <<std::endl;
+
+
+
+//    ScopedPtr entity = new Entity();
+
+//    Entity e;
+//    e.print();
+//
+//    Entity *ptr = &e;
+//    (*ptr).print();
+//
+//    Entity &entity = *ptr;
+//    entity.print();
+
+
+//    const int MAX_AGE = 90;
+////    int const* a = new int;
+//    int *const a = new int;
+//    *a = 2;
+//    std::cout << "a point change before " << a << std::endl;
+////    a = (int *) &MAX_AGE;
+//    std::cout << *a << std::endl;
+//    std::cout << "a point change after  " << a << std::endl;
 
 
 //    std::string name = std::string("john") + " hello";

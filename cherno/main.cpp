@@ -86,10 +86,11 @@ void printString(std::string &string) {
 int main() {
 
     const int MAX_AGE = 90;
-    const int *a = new int; // 不能修改指针指向内容的值
-//    *a = 2;
+//    int const* a = new int;
+    int *const a = new int;
+    *a = 2;
     std::cout << "a point change before " << a << std::endl;
-    a = (int *) &MAX_AGE;
+//    a = (int *) &MAX_AGE;
     std::cout << *a << std::endl;
     std::cout << "a point change after  " << a << std::endl;
 

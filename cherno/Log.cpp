@@ -6,6 +6,7 @@
 #include "Log.h"
 
 
+
 void initLog() {
     Log("Init log");
 }

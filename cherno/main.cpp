@@ -43,52 +43,65 @@ public:
 };
 
 
-//class Entity {
-//public:
-//    void print() const {
-//        std::cout << "hello" << std::endl;
-//    }
-//};
-//
-//class ScopedPtr {
-//private:
-//    Entity *m_Obj;
-//public:
-//    ScopedPtr(Entity *entity) : m_Obj(entity) {
-//
-//    }
-//
-//    ~ScopedPtr(){
-//        delete m_Obj;
-//    }
-//};
+class Entity {
+public:
+    void print() const {
+        std::cout << "hello" << std::endl;
+    }
+};
+
+class ScopedPtr {
+private:
+    Entity *m_Obj;
+public:
+    ScopedPtr(Entity *entity) : m_Obj(entity) {
+
+    }
+
+    ~ScopedPtr(){
+        delete m_Obj;
+    }
+};
+
+class Example {
+public:
+    Example() {
+        std::cout << "Created Example Entity!" << std::endl;
+    }
+
+    Example(int x) {
+        std::cout << "Created Example Entity!" << x << "!" << std::endl;
+    }
+};
+
 
 class Entity {
 private:
     std::string m_Name;
 public:
-    Entity() {
-        m_Name = "UnKnown";
-    }
+    Entity() : m_Name("UnKnown") {}
 
-    Entity(const std::string &name) {
-        m_Name = name;
-    }
+    Entity(const std::string &name) : m_Name(name) {}
 
     const std::string &getName() const {
         return m_Name;
     };
-
 };
 
 int main() {
-    Entity e0;
-    std::cout<<e0.getName() <<std::endl;
+    Entity *e;
+    {
+        Entity *entity = new Entity("john");
+        e = entity;
+        std::cout << (*e).getName() << std::endl;
+    }
 
-    Entity e1("john");
-    std::cout<<e1.getName() <<std::endl;
 
 
+
+//
+//    Entity e1("john");
+//    std::cout << e1.getName() << std::endl;
 
 //    ScopedPtr entity = new Entity();
 

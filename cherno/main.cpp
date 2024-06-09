@@ -6,6 +6,10 @@
 
 class Log {
 public:
+    enum Level {
+        ERROR = 0, WARNING, INFO
+    };
+
     const int LogLevelError = 0;
     const int LogLevelWarning = 1;
     const int LogLevelInfo = 2;
@@ -52,18 +56,18 @@ int Entity::x;
 int Entity::y;
 
 int main() {
-    Entity e;
-    e.x = 2;
-    e.y = 3;
-    print(e);
+//    Entity e;
+//    e.x = 2;
+//    e.y = 3;
+//    print(e);
 
+    Log log;
 
-//    Log log;
 //    log.setLevel(log.LogLevelWarning);
 //    log.warn("Hello!");
 //    log.error("Hello!");
 //    log.info("Hello!");
-//    std::cout << s_Variable << std::endl;
+    std::cout << log.INFO << std::endl;
 }
 
 

@@ -49,3 +49,7 @@ include_directories(/usr/local/opt/gmp/include)
 link_directories(/usr/local/opt/gmp/lib)
 target_link_libraries(your_target_name ${GMP_LIBRARY} ${GMPXX_LIBRARY})
 ```
+
+
+last run
+[main.cpp](cherno%2Fmain.cpp)

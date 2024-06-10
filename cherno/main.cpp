@@ -52,76 +52,31 @@ public:
 
 class ScopedPtr {
 private:
-    Entity* m_Obj;
+    Entity *m_Obj;
 public:
     ScopedPtr(Entity *entity) : m_Obj(entity) {
     }
 
-    ~ScopedPtr(){
+    ~ScopedPtr() {
         delete m_Obj;
+    }
+
+//    Entity *getObject() {
+//        return m_Obj;
+//    }
+
+    Entity*  operator->() {
+        return m_Obj;
     }
 };
 
 
 int main() {
+//    ScopedPtr entity = new Entity(); // chatgpt也说这个会编译错误
+//    entity.getObject()->print();
 
-//    Entity e1("john");
-//    std::cout << e1.getName() << std::endl;
-
-//    ScopedPtr entity = new Entity();
-
-    Entity e;
-    e.print();
-
-    Entity *ptr = &e;
-    (*ptr).print();
-    ptr->print();
-
-//    Entity &entity = *ptr;
-//    entity.print();
-
-
-//    const int MAX_AGE = 90;
-////    int const* a = new int;
-//    int *const a = new int;
-//    *a = 2;
-//    std::cout << "a point change before " << a << std::endl;
-////    a = (int *) &MAX_AGE;
-//    std::cout << *a << std::endl;
-//    std::cout << "a point change after  " << a << std::endl;
-
-
-//    std::string name = std::string("john") + " hello";
-//    printString(name);
-//    std::cout << name << std::endl;
-
-//    Entity *e = new Entity();
-//    Player *p = new Player("john");
-//    print(e);
-//    print(p);
-//
-//    int example[5];
-//    int *ptr = example;
-//    for (int i = 0; i < 5; ++i) {
-//        example[i] = 2;
-//    }
-//
-//    example[2] = 5;
-//    *(ptr + 2) = 6;
-//
-//    int *another = new int[5];
-//    for (int i = 0; i < 5; ++i) {
-//        another[i] = 2;
-//    }
-
-//    const char *name = "Cherno";
-//    name[2] = 'a';
-
-
-
-//    bool contains = name.find("no") != std::string::npos;
-//    std::cout << name << std::endl;
-
+    ScopedPtr entity = new Entity();
+    entity->print();
 }
 
 
